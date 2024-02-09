@@ -1,5 +1,44 @@
-# Official Repo of Tree of Thoughts (ToT)
+# Forked from Official Repo of Tree of Thoughts (ToT)
 
+I changed this repo just a bit and here's the instructions to run this version:
+
+## Setup (Nearchos)
+1. Clone this repository, eg.
+```bash
+git clone https://github.com/epfl-dlab/FoA.git](https://github.com/Potamitisn/tree-of-thought-llm.git
+cd tree-of-thought-llm
+```
+2. Set up an environment variable for OpenAI API, eg.
+```bash
+conda create -n tot python=3.11
+conda activate tot
+conda env config vars set OPENAI_API_KEY=<YOUR_API_KEY>
+conda activate tot
+```
+3. Install requirements, eg.
+```bash
+pip install -r requirements.txt
+pip install -e .
+```
+
+## Quickstart (Nearchos)
+To run an experiment you can simply use:
+```bash
+sh srcipts/game24/bfs.sh
+```
+### Arguments
+There are multiple arguments for different experiments, tasks, etc. but here's the ones I found useful:
+- `--backend`: OpenAI model to use.
+- `--temperature`: Temperature for the model.
+- `--task_start_index`: Index for the first sample to execute. The first sample index is 0 and the first sample index used for the paper's results is 900 (which is also the default value).
+- `--task_end_index`: Index of the final sample to execute. The last sample index is 1362 and the last sample index used for the paper's results is 1000 (which is also the default value).
+
+### Default arguments
+```bash
+sh srcipts/game24/bfs.sh --backend gpt-4 --temperature 0.7 --task_start_index 900 --task_end_index 1000
+```
+
+# Original repo
 <p>
     <a href="https://badge.fury.io/py/tree-of-thoughts-llm">
         <img src="https://badge.fury.io/py/tree-of-thoughts-llm.svg">
