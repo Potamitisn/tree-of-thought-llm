@@ -5,7 +5,7 @@ I changed this repo just a bit and here's the instructions to run this version:
 ## Setup (Nearchos)
 1. Clone this repository, eg.
 ```bash
-git clone https://github.com/epfl-dlab/FoA.git](https://github.com/Potamitisn/tree-of-thought-llm.git
+git clone https://github.com/Potamitisn/tree-of-thought-llm.git
 cd tree-of-thought-llm
 ```
 2. Set up an environment variable for OpenAI API, eg.
@@ -24,7 +24,7 @@ pip install -e .
 ## Quickstart (Nearchos)
 To run an experiment you can simply use:
 ```bash
-sh srcipts/game24/bfs.sh
+sh scripts/game24/bfs.sh
 ```
 ### Arguments
 There are multiple arguments for different experiments, tasks, etc. but here's the ones I found useful:
@@ -35,7 +35,7 @@ There are multiple arguments for different experiments, tasks, etc. but here's t
 
 ### Default arguments
 ```bash
-sh srcipts/game24/bfs.sh --backend gpt-4 --temperature 0.7 --task_start_index 900 --task_end_index 1000
+sh scripts/game24/bfs.sh --backend gpt-3.5-turbo-0125 --temperature 0.7 --task_start_index 900 --task_end_index 1000
 ```
 
 # Original repo
